@@ -134,6 +134,6 @@ class PostsContorller extends Controller
         }
 
         $post->delete();
-        return redirect('/home')->with('success', 'Post Deleted');
+        return redirect('/posts')->with('success', 'Post Deleted');
     }
 }

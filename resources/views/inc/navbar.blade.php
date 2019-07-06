@@ -22,6 +22,11 @@
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="/posts">All Posts</a>
                 </li>
+                @if (!Auth::guest())
+                    <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="/users">All Users</a>
+                    </li>
+                @endif
             </ul>
 
             <!-- Right Side Of Navbar -->
@@ -47,7 +52,7 @@
                         
 
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="/home">Dashboard</a>
+                        <a class="dropdown-item" href="/profile/{{Auth::user()->id}}">Dashboard</a>
                                 <hr>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();

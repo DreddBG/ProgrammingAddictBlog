@@ -17,11 +17,13 @@ Route::get('/about', 'PagesController@about');
 
 Route::get('/services', 'PagesController@services');
 
+Route::get('/users', 'UsersController@index');
+
 Route::resource('posts', 'PostsContorller');
 Route::resource('comments', 'CommentsController', ['except' => ['store']]);
 
 Route::post('comments/{post_id}', ['uses' => 'CommentsController@store', 'as' => 'comments.store']);
 
-Auth::routes();
+Route::get('/profile/{user_id}', 'ProfileController@show');
 
-Route::get('/home', 'HomeController@index');
+Auth::routes();

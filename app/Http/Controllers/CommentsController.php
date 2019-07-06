@@ -108,6 +108,6 @@ class CommentsController extends Controller
         $commnet = Comment::find($id);
 
         $commnet->delete();
-        return redirect('/posts')->with('success', 'Post Deleted');
+        return redirect('/posts/'.$commnet->post_id)->with('success', 'Comment Deleted');
     }
 }

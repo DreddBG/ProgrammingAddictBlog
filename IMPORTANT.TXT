@@ -1,0 +1,7 @@
+
+
+
+
+
+## REMINDER TO DUMB FUTURE ME USE THIS TO SERVE THIS APP ##
+php artisan serve --host 192.168.0.44 --port 8080

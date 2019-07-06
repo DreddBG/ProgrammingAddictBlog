@@ -32,7 +32,5 @@
             </main>
         </div>
     </div>
-    <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-    <script src="/vendor/unisharp/laravel-ckeditor/adapters/jquery.js"></script>
 </body>
 </html>
