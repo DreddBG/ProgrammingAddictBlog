@@ -6,15 +6,21 @@
             <div class="row">
                     <table class="table table-striped">
                         <tr>
-                            <th>Post title</th>
+                            <th>ID</th>
+                            <th>Username</th>
+                            <th>Password</th>
                             <th class=" text-center">Edit</th>
                             <th class=" text-center">Delete</th>
                         </tr>
                     @foreach($users as $user)
                         <tr>
+                            <th>{{$user->id}} ID</th>
                             <th>
-                                <h2><a href="/profile/{{$user->id}}">{{$user->id}} ID {{$user->name}} </a></h2>
+                                <h2><a href="/profile/{{$user->id}}">{{$user->name}} </a></h2>
                                 <small>Created on {{$user->created_at}}</small>
+                            </th>
+                            <th>
+                                <p>{!! Str::limit($user->password, 10, '****') !!}</p>
                             </th>
                             <th class=" text-center">
                                 <a href="">Edit</a>
@@ -28,7 +34,7 @@
             </div>
             <div class="row">
                 <div class="col" name="Links">
-                    {{-- {{$user->links()}} --}}
+                    {{$users->links()}}
                 </div>
             </div>
     @else

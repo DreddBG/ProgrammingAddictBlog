@@ -18,7 +18,7 @@ class UsersController extends Controller
         //$posts = Post::orderBy('title', 'desc')->get();
         //$posts = DB::select('SELECT * FROM posts ORDER BY title')->get();
 
-        $users = Users::orderBy('name', 'asc')->get();
+        $users = Users::orderBy('id', 'asc')->paginate(3);
         return view('users.index')->with('users', $users);
     }
 

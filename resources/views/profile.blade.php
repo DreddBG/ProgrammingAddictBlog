@@ -31,7 +31,7 @@
                         </div>            
                     </div>
                     <br>
-                    <h4 class="text-center">Your Blog Posts</h4>
+                    <h4 class="text-center">{{ explode(" ", $user->name)[0] }} blog posts</h4>
 
                     
                     
